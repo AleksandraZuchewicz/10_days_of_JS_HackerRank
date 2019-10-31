@@ -6,7 +6,16 @@
  * Parameter(s):
  * nums: An array of numbers.
  */
+
+// Functional Approach
 let nums = [1, 2, 3, 4, 5];
+const double = n => n * 2;
+const triple = n => n * 3;
+const isEven = n => n % 2 == 0;
+const multiplyMap = n => (isEven(n) ? double(n) : triple(n));
+const modifyArr = nums => nums.map(multiplyMap);
+console.log(modifyArr(nums));
+
 function modifyArray(nums) {
   let newArray = [];
   for (let i = 0; i < nums.length; i++) {
